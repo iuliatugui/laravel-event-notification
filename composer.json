@@ -1,0 +1,25 @@
+{
+    "name": "ivfuture/laravel-event-notification",
+    "description": "Laravel package to send notification through events.",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Iulia Tugui",
+            "email": "iulia.tugui@ivfuture.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Ivfuture\\EventNotification\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.2",
+        "predis/predis": "^1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    }
+}
