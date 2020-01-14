@@ -1,6 +1,6 @@
 {
     "name": "ivfuture/laravel-event-notification",
-    "description": "This package provides an easy way to integrate notification with Laravel 6, Redis and socket.io .",
+    "description": "This package provides an easy way to integrate real time notifications with Laravel 6, Redis and socket.io .",
     "type": "package",
     "license": "MIT",
     "authors": [
@@ -24,28 +24,28 @@
     },
     "scripts": {
         "pre-package-install": [
-            "./script.sh"
+            "./bin/script.sh"
         ],
         "post-package-install": [
-            "./script.sh"
+            "./bin/script.sh"
         ],
         "pre-install-cmd": [
-            "./script.sh"
+            "./bin/script.sh"
         ],
         "post-install-cmd": [
-            "./script.sh"
+            "./bin/script.sh"
         ],
         "pre-autoload-dump": [
-            "./script.sh"
+            "./bin/script.sh"
         ],
         "post-autoload-dump": [
-            "./script.sh"
+            "./bin/script.sh"
         ],
         "pre-dependencies-solving": [
-            "./script.sh"
+            "./bin/script.sh"
         ],
         "post-dependencies-solving": [
-            "npm install express socket.io ioredis redis  --save"
+            "./bin/script.sh"
         ]
 
 
