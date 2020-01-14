@@ -30,7 +30,7 @@ $this->sendNotification($p_sender_id, $p_receiver_id, $p_notifiable_type, $p_not
 
 ```
 
-##Instalation
+## Installation
 
 You can install this package via composer using:
 
@@ -64,7 +64,7 @@ Next we have to install npm packages:
 npm install express socket.io ioredis redis  --save
 ```
 
-##Settings
+## Settings
 First of all you have to edit your ```.env``` file to tell Laravel to use the correct ```BROADCAST_DRIVER```.
 
 ```
@@ -95,7 +95,7 @@ node  vendor/ivfuture/laravel-event-notification/src/socket.js
 redis-server --port 3001
 ```
 
-##Usage
+## Usage
 After you've installed the package and did all the settings it's time to integrate the notifications in your project.
 
 First, don't forget to import the trait at the top of your file.
@@ -103,7 +103,7 @@ First, don't forget to import the trait at the top of your file.
 use NotificationTrait;
 ```
 
-###Subscribe to channels notification
+### Subscribe to channels notification
 
 In your Controller constructor you must subscribe to the channels. You can do this by using ```NotificationTrait```' function ```subscribeToNotificationChannels()```. It will seek in ```notification_type``` table for channels and will automatically subscribe to them.
 ```php
@@ -116,7 +116,7 @@ public function __construct()
 }
 ```
 
-###Send a notification
+### Send a notification
 
 There is also a convenient function for sending a notification:
 ```php
@@ -128,14 +128,14 @@ $this->sendNotification($p_sender_id, $p_receiver_id, $p_notifiable_type, $p_not
 ```
 This will save the notification into database and will send an event with all its data.
 
-###Get notifications from database
+### Get notifications from database
 You can get the notifications from database:
 ```php
 Notification::latest()->where('receiver_id', auth()->user()->id )->get()->groupByDate();
 ```
 This will provide us notifications grouped by time categories like: ```today```, ```this week```, ```last week``` or ```older```.
 
-###Receive the notification in view
+### Receive the notification in view
 
 To receive real time notifications you must follow this 3 steps:
 
