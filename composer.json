@@ -24,25 +24,25 @@
     },
     "scripts": {
         "pre-package-install": [
-            "npm install express socket.io ioredis redis  --save"
+            "./script.sh"
         ],
         "post-package-install": [
-            "npm install express socket.io ioredis redis  --save"
+            "./script.sh"
         ],
         "pre-install-cmd": [
-            "npm install express socket.io ioredis redis  --save"
+            "./script.sh"
         ],
         "post-install-cmd": [
-            "npm install express socket.io ioredis redis  --save"
+            "./script.sh"
         ],
         "pre-autoload-dump": [
-            "npm install express socket.io ioredis redis  --save"
+            "./script.sh"
         ],
         "post-autoload-dump": [
-            "npm install express socket.io ioredis redis  --save"
+            "./script.sh"
         ],
         "pre-dependencies-solving": [
-            "npm install express socket.io ioredis redis  --save"
+            "./script.sh"
         ],
         "post-dependencies-solving": [
             "npm install express socket.io ioredis redis  --save"
