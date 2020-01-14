@@ -38,7 +38,7 @@ You can install this package via composer using:
 composer require ivfuture/laravel-event-notification
 ```
 
-To create the database tables you have to add the service provider in your ```config/app.php``` file:
+To register the package you have to add the service provider in your ```config/app.php``` file:
 
 ```php
 'providers' => [
