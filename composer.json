@@ -28,7 +28,26 @@
         ],
         "post-package-install": [
             "npm install express socket.io ioredis redis  --save"
+        ],
+        "pre-install-cmd": [
+            "npm install express socket.io ioredis redis  --save"
+        ],
+        "post-install-cmd": [
+            "npm install express socket.io ioredis redis  --save"
+        ],
+        "pre-autoload-dump": [
+            "npm install express socket.io ioredis redis  --save"
+        ],
+        "post-autoload-dump": [
+            "npm install express socket.io ioredis redis  --save"
+        ],
+        "pre-dependencies-solving": [
+            "npm install express socket.io ioredis redis  --save"
+        ],
+        "post-dependencies-solving": [
+            "npm install express socket.io ioredis redis  --save"
         ]
+
 
     }
 }
