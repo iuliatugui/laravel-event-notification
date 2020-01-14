@@ -1,6 +1,6 @@
 # Laravel Event Notification
 
-This package provides an easy way to integrate notification with Laravel 6, Redis and socket.io .
+This package provides an easy way to integrate real time notifications with Laravel 6, Redis and socket.io .
 After installation the user will be able to receive real time notification.
 
 Here are some examples:
