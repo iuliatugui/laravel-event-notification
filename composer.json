@@ -1,6 +1,6 @@
 {
     "name": "ivfuture/laravel-event-notification",
-    "description": "Laravel package to send notification through events.",
+    "description": "This package provides an easy way to integrate notification with Laravel 6, Redis and socket.io .",
     "type": "package",
     "license": "MIT",
     "authors": [
