@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNotificationTypeTable extends Migration
+class CreateNotificationChannelTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateNotificationTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('notification_type', function (Blueprint $table) {
+        Schema::create('notification_channel', function (Blueprint $table) {
             $table->increments('id');
             $table->string('label');
             $table->string('icon');
@@ -29,6 +29,6 @@ class CreateNotificationTypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notification_type');
+        Schema::dropIfExists('notification_channel');
     }
 }
