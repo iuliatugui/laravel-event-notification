@@ -36,7 +36,7 @@ redis.on('message', function (channel, message) {
     // In order words, it belongs to SendNotification
     else {
         // Emit the message data to socket
-        io.emit(channel + ':' + message.event, message.data);
+        io.emit(channel, message.data);
         console.log("Message: " + JSON.stringify(message.data));
     }
 
