@@ -29,6 +29,8 @@ class NotificationServiceProvider extends ServiceProvider
     private function publishMigrations()
     {
         $path = $this->getMigrationsPath();
+
+        // Copy the content of migrations folder from the package to the migrations folder from project
         $this->publishes([$path => database_path('migrations')], 'migrations');
     }
 

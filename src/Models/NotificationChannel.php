@@ -11,7 +11,7 @@ class NotificationChannel extends Model
      *
      * @var string
      */
-    protected $table = 'notification_type';
+    protected $table = 'notification_channel';
 
     /**
      * The attributes that are mass assignable.

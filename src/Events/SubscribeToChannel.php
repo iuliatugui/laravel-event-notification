@@ -17,7 +17,7 @@ class SubscribeToChannel implements ShouldBroadcast
     public $channel;
 
     /**
-     * Create a new event instance.
+     * Send as message the channel that Redis should subscribe to
      *
      * @return void
      */
@@ -28,7 +28,7 @@ class SubscribeToChannel implements ShouldBroadcast
     }
 
     /**
-     * Get the channels the event should broadcast on.
+     * Get the channel the event should broadcast on.
      *
      * @return Channel|array
      */

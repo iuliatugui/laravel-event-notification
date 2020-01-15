@@ -8,6 +8,11 @@ use function foo\func;
 
 class NotificationCollection extends Collection
 {
+    /**
+     * Mapping the array's results according to the time they were sent
+     *
+     * @return NotificationCollection
+     */
     public function groupByDate(){
 
         return $this->groupBy(function($notification){

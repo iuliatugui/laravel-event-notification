@@ -32,11 +32,28 @@ class Notification extends Model
 
     );
 
+    /**
+     * Create a notification collection
+     *
+     * @param array $models
+     * @return \Illuminate\Database\Eloquent\Collection|NotificationCollection
+     */
     public function newCollection(array $models = [])
     {
         return new NotificationCollection($models);
     }
 
+    /**
+     * Save the notification into database
+     *
+     * @param $sender_id
+     * @param $receiver_id
+     * @param $notifiable_type
+     * @param $notifiable_id
+     * @param $channel_id
+     * @param $title
+     * @param $description
+     */
     public function saveNotification($sender_id, $receiver_id, $notifiable_type, $notifiable_id, $channel_id, $title, $description){
 
         $this->sender_id = $sender_id;
@@ -49,6 +66,7 @@ class Notification extends Model
         $this->save();
 
     }
+
 
     public function channel(){
         return $this->belongsTo(NotificationChannel::class,'channel_id');

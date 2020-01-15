@@ -25,7 +25,7 @@ class SendNotification implements ShouldBroadcast
     public $description;
 
     /**
-     * Create a new event instance.
+     * Send as message the notification data
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class SendNotification implements ShouldBroadcast
     }
 
     /**
-     * Get the channels the event should broadcast on.
+     * Get the channel the notification should broadcast on.
      *
      * @return Channel|array
      */
