@@ -105,7 +105,7 @@ use NotificationTrait;
 
 ### Subscribe to channels notification
 
-In your Controller constructor you must subscribe to the channels. You can do this by using ```NotificationTrait```'s function ```subscribeToNotificationChannels()```. It will search in ```notification_type``` table for channels and will automatically subscribe to them.
+In your Controller constructor you must subscribe to the channels. You can do this by using ```NotificationTrait```'s function ```subscribeToNotificationChannels()```. It will search in ```notification_channel``` table for channels and will automatically subscribe to them.
 ```php
 public function __construct()
 {
