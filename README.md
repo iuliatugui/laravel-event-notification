@@ -151,7 +151,7 @@ Note: By default the server wil listen for port 3000. You can change that by edi
 
 3 - Listen to the channel from which notification was sent.
 ```javascript
-socket.on("post-liked:App\\Events\\SendNotification", function (data) {
+socket.on("post-liked", function (data) {
     // ...
 });
 ```
@@ -159,11 +159,11 @@ Note: If you have many channels, you must listen to all of them.
 
 Example:
 ```javascript
-socket.on("post-liked:App\\Events\\SendNotification", function (data) {
+socket.on("post-liked", function (data) {
     // ...
 });
 
-socket.on("post-commented:App\\Events\\SendNotification", function (data) {
+socket.on("post-commented", function (data) {
     // ...
 });
 ```
