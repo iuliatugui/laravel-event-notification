@@ -1,7 +1,7 @@
 # Laravel Event Notification
 
-This package provides an easy way to integrate notification with Laravel 6, Redis and socket.io .
-After installation the user will be able to receive real time notification.
+This package provides an easy way to integrate notifications with Laravel 6, Redis and socket.io .
+After the installation the user will be able to receive real time notification.
 
 Here are some examples:
 
@@ -46,7 +46,7 @@ To register the package you have to add the service provider in your ```config/a
     Ivfuture\EventNotification\NotificationServiceProvider::class,
 ];
 ```
-Now you shoud publish the migration with:
+Now you should publish the migration with:
 
 ```bash
 php artisan vendor:publish --provider="Ivfuture\EventNotification\NotificationServiceProvider"
@@ -58,20 +58,20 @@ After the migration have been published you can create the tables by running the
 php artisan migrate
 ```
 
-Next we have to install npm packages:
+Next, we have to install the npm packages:
 
 ```bash
 npm install express socket.io ioredis redis  --save
 ```
 
 ## Settings
-First of all you have to edit your ```.env``` file to tell Laravel to use the correct ```BROADCAST_DRIVER```.
+First of all, you have to edit your ```.env``` file to tell Laravel to use the correct ```BROADCAST_DRIVER```.
 
 ```
 BROADCAST_DRIVER=redis
 ```
 
-If you are using an older version of Laravel you could skip the next step.
+If you are using an older version of Laravel you may skip the next step.
 You have to edit your ```config/database.php``` file and comment the line that is adding a prefix to redis:
 
 ```php
@@ -96,7 +96,7 @@ redis-server --port 3001
 ```
 
 ## Usage
-After you've installed the package and did all the settings it's time to integrate the notifications in your project.
+After you've installed the package and done all the settings it's time to integrate the notifications in your project.
 
 First, don't forget to import the trait at the top of your file.
 ```php
@@ -105,7 +105,7 @@ use NotificationTrait;
 
 ### Subscribe to channels notification
 
-In your Controller constructor you must subscribe to the channels. You can do this by using ```NotificationTrait```' function ```subscribeToNotificationChannels()```. It will seek in ```notification_type``` table for channels and will automatically subscribe to them.
+In your Controller constructor you must subscribe to the channels. You can do this by using ```NotificationTrait```'s function ```subscribeToNotificationChannels()```. It will search in ```notification_type``` table for channels and will automatically subscribe to them.
 ```php
 public function __construct()
 {
@@ -126,14 +126,14 @@ $notification_channel = NotificationChannel::where('label', 'post-liked')->first
 $this->sendNotification($p_sender_id, $p_receiver_id, $p_notifiable_type, $p_notifiable_id, $notification_channel->id, $p_title, $p_description);
 
 ```
-This will save the notification into database and will send an event with all its data.
+This will save the notification into the database and will send an event with all its data.
 
 ### Get notifications from database
 You can get the notifications from database:
 ```php
 Notification::latest()->where('receiver_id', auth()->user()->id )->get()->groupByDate();
 ```
-This will provide us notifications grouped by time categories like: ```today```, ```this week```, ```last week``` or ```older```.
+This will provide us with notifications grouped by time categories like: ```today```, ```this week```, ```last week``` or ```older```.
 
 ### Receive the notification in view
 
@@ -149,7 +149,7 @@ var socket = io('{{ env("APP_URL") }}:3000');
 ```
 Note: By default the server wil listen for port 3000. You can change that by editing the value of ```PORT```  in your ```.env``` file.
 
-3 - Listen to the channel which notification was send.
+3 - Listen to the channel from which notification was sent.
 ```javascript
 socket.on("post-liked:App\\Events\\SendNotification", function (data) {
     // ...
